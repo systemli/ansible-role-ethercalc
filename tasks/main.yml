@@ -1,0 +1,58 @@
+- name: ensure ethercalc user is present
+  user:
+    name: "{{ ethercalc_user }}"
+    home: "{{ ethercalc_home }}"
+    shell: "/bin/bash"
+    state: present
+
+- name: ensure required packages are installed
+  apt:
+    pkg: "{{ item }}"
+    state: installed
+  with_items: ethercalc_required_packages
+
+- name: ensure symlink /usr/bin/nodejs is linked to /usr/bin/node
+  file:
+    src: /usr/bin/nodejs
+    dest: /usr/bin/node
+    owner: "{{ ethercalc_user }}"
+    group: "{{ ethercalc_user }}"
+    state: link
+
+- name: ensure nodejs-legacy is installed
+  apt:
+    pkg: nodejs-legacy
+    state: installed
+  when: ansible_distribution == 'Debian' and ansible_distribution_version == 'jessie'
+
+- name: ensure ethercalc is latest
+  git:
+    repo: "{{ ethercalc_repository }}"
+    dest: "{{ ethercalc_path }}"
+    version: "{{ ethercalc_repository_version}}"
+    key_file: "{{ ethercalc_repository_key_file}}"
+  become_user: "{{ ethercalc_user }}"
+  register: repository
+
+- name: install ethercalc
+  command: npm install -g
+  args:
+    chdir: "{{ ethercalc_path }}"
+  when: repository.changed
+
+- name: ensure ethercalc systemd script is latest
+  template:
+    src: ethercalc.service.j2
+    dest: /etc/systemd/system/ethercalc.service
+    owner: root
+    group: root
+    mode: 0755
+  notify: reload systemd
+
+- name: ensure ethercalc will start after system is booted
+  service:
+    name: ethercalc
+    enabled: yes
+
+- include: monit.yml
+  when: ethercalc_monit_enabled

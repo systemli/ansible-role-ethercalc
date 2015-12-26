@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: shadow
+  description: role to maintain and configure ethercalc
+  company: systemli.org
+  license: GPLv3
+  min_ansible_version: 1.7
+  platforms:
+  - name: Debian
+    versions:
+      - jessie
+  categories:
+    - web
+dependencies: []

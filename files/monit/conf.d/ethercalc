@@ -1,0 +1,5 @@
+check process ethercalc
+    matching "ethercalc"
+    start program = "/usr/sbin/service ethercalc start" with timeout 60 seconds
+    stop program  = "/usr/sbin/service ethercalc stop"
+    group server

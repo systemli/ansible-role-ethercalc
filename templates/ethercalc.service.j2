@@ -1,0 +1,12 @@
+[Unit]
+Description=ethercalc (real-time collaborative spreadsheet editing)
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User={{ ethercalc_user }}
+Group={{ ethercalc_group }}
+ExecStart=/usr/local/bin/ethercalc --host {{ ethercalc_ip }} --port {{ ethercalc_port }} --expire {{ ethercalc_spread_seconds_to_expire }}
+
+[Install]
+WantedBy=multi-user.target
