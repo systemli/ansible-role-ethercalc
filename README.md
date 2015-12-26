@@ -1,6 +1,8 @@
 ansible-ethercalc
 ===========================
 
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-ethercalc-blue.svg)](https://galaxy.ansible.com/detail#/role/6657)
+
 Install and maintain an [Ethercalc](https://ethercalc.net/) service.
 
 This role will setup an ethercalc service running on 0.0.0.0:8000.
