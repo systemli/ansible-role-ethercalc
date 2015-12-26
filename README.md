@@ -1,8 +1,6 @@
 ansible-ethercalc
 ===========================
 
-[![Build Status](https://travis-ci.org/systemli/ansible-ethercalc.svg)](https://travis-ci.org/systemli/ansible-ethercalc)
-
 Install and maintain an [Ethercalc](https://ethercalc.net/) service.
 
 This role will setup an ethercalc service running on 0.0.0.0:8000.
