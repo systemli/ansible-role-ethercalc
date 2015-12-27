@@ -14,7 +14,7 @@ All spreadsheets will expire after 30days of inactivity
 Role Variables
 --------------
 
-* `ethercalc_required_packages: [ odejs, npm, git, make, g++, ]`
+* `ethercalc_required_packages: [ nodejs, npm, git, make, g++, ]`
 * `ethercalc_repository: "https://github.com/audreyt/ethercalc.git"`
 * `ethercalc_repository_key_file: ""`
 * `ethercalc_repository_version: "master"`
