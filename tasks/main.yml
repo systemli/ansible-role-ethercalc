@@ -9,7 +9,7 @@
   apt:
     pkg: "{{ item }}"
     state: installed
-  with_items: ethercalc_required_packages
+  with_items: "{{ ethercalc_required_packages }}"
 
 - name: ensure symlink /usr/bin/nodejs is linked to /usr/bin/node
   file:
