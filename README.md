@@ -1,7 +1,7 @@
 ansible-ethercalc
-===========================
+=================
 
-[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-ethercalc-blue.svg)](https://galaxy.ansible.com/detail#/role/6657)
+[![Build Status](https://travis-ci.org/systemli/ansible-ethercalc.svg)](https://travis-ci.org/systemli/ansible-ethercalc) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-ethercalc-blue.svg)](https://galaxy.ansible.com/detail#/role/6657)
 
 Install and maintain an [Ethercalc](https://ethercalc.net/) service.
 
@@ -28,13 +28,19 @@ Role Variables
 * `ethercalc_monit_enabled: False`
 * `ethercalc_spread_seconds_to_expire: 2592000`
 
+Download
+--------
+
+Download latest release with `ansible-galaxy`
+
+	ansible-galaxy install systemli.ethercalc
 
 Example Playbook
 ----------------
 
     - hosts: servers
       roles:
-         - { role: shadow.ethercalc }
+         - { role: systemli.ethercalc }
 
 License
 -------
