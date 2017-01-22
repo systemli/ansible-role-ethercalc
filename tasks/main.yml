@@ -11,14 +11,6 @@
     state: installed
   with_items: "{{ ethercalc_required_packages }}"
 
-- name: ensure symlink /usr/bin/nodejs is linked to /usr/bin/node
-  file:
-    src: /usr/bin/nodejs
-    dest: /usr/bin/node
-    owner: "{{ ethercalc_user }}"
-    group: "{{ ethercalc_user }}"
-    state: link
-
 - name: ensure nodejs-legacy is installed
   apt:
     pkg: nodejs-legacy
