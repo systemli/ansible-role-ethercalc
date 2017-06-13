@@ -1,6 +1,5 @@
 ethercalc_required_packages:
   - nodejs
-  - npm
   - git
   - make
   - g++
