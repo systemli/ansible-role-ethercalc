@@ -14,6 +14,5 @@ galaxy_info:
         - trusty
   categories:
     - web
-  notifications:
-    webhooks: https://galaxy.ansible.com/api/v1/notifications/
-dependencies: []
+dependencies:
+  - geerlingguy.nodejs
