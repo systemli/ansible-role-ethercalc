@@ -24,7 +24,7 @@ set -e
 start() {
   echo "Starting $DESC... "
 
-    start-stop-daemon --start --chuid "$USER:$GROUP" --background --make-pidfile --pidfile /var/run/$NAME.pid --exec /usr/local/bin/ethercalc {{ ethercalc_cors|ternary('--cors', '' }} --host {{ ethercalc_ip }} --port {{ ethercalc_port }} --expire {{ ethercalc_spread_seconds_to_expire }} -- $LOGFILE || true
+    start-stop-daemon --start --chuid "$USER:$GROUP" --background --make-pidfile --pidfile /var/run/$NAME.pid --exec /usr/local/bin/ethercalc {{ ethercalc_cors|ternary('--cors', '') }} --host {{ ethercalc_ip }} --port {{ ethercalc_port }} --expire {{ ethercalc_spread_seconds_to_expire }} -- $LOGFILE || true
   echo "done"
 }
 

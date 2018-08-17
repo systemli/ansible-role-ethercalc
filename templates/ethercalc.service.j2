@@ -6,7 +6,7 @@ After=syslog.target network.target
 Type=simple
 User={{ ethercalc_user }}
 Group={{ ethercalc_group }}
-ExecStart=/usr/local/bin/ethercalc {{ ethercalc_cors|ternary('--cors', '' }} --host {{ ethercalc_ip }} --port {{ ethercalc_port }} --expire {{ ethercalc_spread_seconds_to_expire }}
+ExecStart=/usr/local/bin/ethercalc {{ ethercalc_cors|ternary('--cors', '') }} --host {{ ethercalc_ip }} --port {{ ethercalc_port }} --expire {{ ethercalc_spread_seconds_to_expire }}
 
 [Install]
 WantedBy=multi-user.target
