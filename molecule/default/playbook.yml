@@ -3,4 +3,4 @@
   hosts: all
   remote_user: root
   roles:
-    - role: ansible-ethercalc
+    - role: ansible-role-ethercalc

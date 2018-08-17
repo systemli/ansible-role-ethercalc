@@ -1,7 +1,7 @@
 ansible-ethercalc
 =================
 
-[![Build Status](https://travis-ci.org/systemli/ansible-ethercalc.svg)](https://travis-ci.org/systemli/ansible-ethercalc) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-ethercalc-blue.svg)](https://galaxy.ansible.com/detail#/role/6657)
+[![Build Status](https://travis-ci.org/systemli/ansible-role-ethercalc.svg)](https://travis-ci.org/systemli/ansible-role-ethercalc) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-ethercalc-blue.svg)](https://galaxy.ansible.com/detail#/role/6657)
 
 Install and maintain an [Ethercalc](https://ethercalc.net/) service.
 
