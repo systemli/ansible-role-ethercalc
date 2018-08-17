@@ -13,3 +13,7 @@ ethercalc_ip: 0.0.0.0
 ethercalc_port: 8000
 ethercalc_monit_enabled: False
 ethercalc_spread_seconds_to_expire: 2592000
+# Disable Cross-Origin Resource Sharing (otherwise, a list of all pads
+# is publically available). For more information, see
+# https://github.com/audreyt/ethercalc#enable-cross-origin-resource-sharing---cors
+ethercalc_cors: False
