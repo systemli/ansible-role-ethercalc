@@ -1,3 +1,5 @@
+---
+
 - name: Ensure apt_preferences include file for deb.nodesource.com is present
   copy:
     src: apt/preferences.d/deb.nodesource.com.pref
@@ -27,6 +29,8 @@
     key_file: "{{ ethercalc_repository_key_file}}"
   become_user: "{{ ethercalc_user }}"
   register: repository
+  vars:
+    ansible_ssh_pipelining: True
 
 - name: install ethercalc
   command: npm install -g
@@ -42,7 +46,7 @@
     group: root
     mode: 0755
   notify: reload systemd
-  when: (ansible_distribution == 'Debian')
+  when: ansible_distribution == 'Debian'
 
 - name: ensure ethercalc sysvinit script is latest
   template:
