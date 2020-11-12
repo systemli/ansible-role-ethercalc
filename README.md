@@ -1,7 +1,8 @@
 ansible-ethercalc
 =================
 
-[![Build Status](https://travis-ci.org/systemli/ansible-role-ethercalc.svg)](https://travis-ci.org/systemli/ansible-role-ethercalc) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-ethercalc-blue.svg)](https://galaxy.ansible.com/detail#/role/6657)
+[![Build Status](https://github.com/systemli/ansible-role-ethercalc/workflows/Molecule/badge.svg?branch=master)](https://github.com/systemli/ansible-role-ethercalc/actions?query=workflow%3AMolecule)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-ethercalc-blue.svg)](https://galaxy.ansible.com/detail#/role/6657)
 
 Install and maintain an [Ethercalc](https://ethercalc.net/) service.
 
@@ -48,7 +49,7 @@ Testing & Development
 Tests
 -----
 
-For developing and testing the role we use Travis CI, Molecule and Vagrant. On the local environment you can easily test the role with
+For developing and testing the role we use Github Actions, Molecule, and Vagrant. On the local environment you can easily test the role with
 
 Run local tests with:
 
