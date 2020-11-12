@@ -16,6 +16,7 @@ jobs:
     strategy:
       matrix:
         distro:
+          - debian10
           - debian9
           - debian8
 
