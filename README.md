@@ -1,7 +1,7 @@
 ansible-ethercalc
 =================
 
-[![Build Status](https://github.com/systemli/ansible-role-ethercalc/workflows/Molecule/badge.svg?branch=master)](https://github.com/systemli/ansible-role-ethercalc/actions?query=workflow%3AMolecule)
+[![Build Status](https://github.com/systemli/ansible-role-ethercalc/workflows/Molecule/badge.svg?branch=master)](https://github.com/systemli/ansible-role-ethercalc/actions?query=workflow%3AIntegration)
 [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-ethercalc-blue.svg)](https://galaxy.ansible.com/systemli/ethercalc)
 
 Install and maintain an [Ethercalc](https://ethercalc.net/) service.
