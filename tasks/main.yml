@@ -39,10 +39,11 @@
   vars:
     ansible_ssh_pipelining: True
 
-- name: install ethercalc
-  command: npm install -g
+- name: install nodejs dependencies
+  command: npm clean-install
   args:
     chdir: "{{ ethercalc_path }}"
+  become_user: "{{ ethercalc_user }}"
   when: repository.changed
 
 - name: ensure ethercalc systemd script is latest
