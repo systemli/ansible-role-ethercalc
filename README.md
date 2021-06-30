@@ -27,7 +27,7 @@ Role Variables
 * `ethercalc_ip: 0.0.0.0`
 * `ethercalc_port: 8000`
 * `ethercalc_monit_enabled: False`
-* `ethercalc_spread_seconds_to_expire: 2592000`
+* `ethercalc_spread_seconds_to_expire: 2678400`
 
 Download
 --------
