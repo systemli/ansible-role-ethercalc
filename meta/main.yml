@@ -9,8 +9,6 @@ galaxy_info:
     - name: Debian
       versions:
         - buster
-        - stretch
-        - jessie
     - name: Ubuntu
       versions:
         - trusty

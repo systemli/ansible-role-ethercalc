@@ -4,14 +4,10 @@ driver:
   provider:
     name: virtualbox
 platforms:
-  - name: stretch64
-    box: debian/stretch64
+  - name: buster64
+    box: debian/buster64
     memory: 512
-    cpus: 1
-  - name: jessie64
-    box: debian/jessie64
-    memory: 512
-    cpus: 1
+    cpus: 2
 lint: yamllint .
 provisioner:
   name: ansible
