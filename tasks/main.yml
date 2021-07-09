@@ -19,6 +19,7 @@
   apt:
     pkg: "{{ item }}"
     state: present
+    cache_valid_time: 600
   with_items: "{{ ethercalc_required_packages }}"
 
 - name: ensure ethercalc is latest
