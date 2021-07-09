@@ -14,3 +14,4 @@ provisioner:
   name: ansible
   playbooks:
     converge: ../default/converge.yml
+    prepare: ../default/prepare.yml
