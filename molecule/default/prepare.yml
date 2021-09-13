@@ -3,6 +3,6 @@
   hosts: all
   become: True
   tasks:
-    - name: apt update
+    - name: Run the equivalent of "apt-get update" before installing packages
       apt:
-        update_cache: true
+        update_cache: yes
