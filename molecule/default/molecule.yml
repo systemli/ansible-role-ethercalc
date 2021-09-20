@@ -4,6 +4,10 @@ driver:
   provider:
     name: virtualbox
 platforms:
+  - name: bullseye64
+    box: debian/bullseye64
+    memory: 512
+    cpus: 2
   - name: buster64
     box: debian/buster64
     memory: 512

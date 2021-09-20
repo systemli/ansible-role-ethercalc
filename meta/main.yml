@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: ethercalc
   author: systemli
   description: role to maintain and configure ethercalc
   company: systemli.org
@@ -9,6 +10,7 @@ galaxy_info:
     - name: Debian
       versions:
         - buster
+        - bullseye
     - name: Ubuntu
       versions:
         - trusty
