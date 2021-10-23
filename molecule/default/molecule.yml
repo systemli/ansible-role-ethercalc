@@ -8,6 +8,8 @@ platforms:
     box: debian/bullseye64
     memory: 512
     cpus: 2
+    instance_raw_config_args:
+      - "vm.network 'forwarded_port', guest: 8000, host: 8000"
   - name: buster64
     box: debian/buster64
     memory: 512
