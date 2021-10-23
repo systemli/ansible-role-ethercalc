@@ -6,3 +6,4 @@
     - role: ansible-role-ethercalc
   vars:
     nodejs_install_npm_user: root
+    ethercalc_redis_enabled: no

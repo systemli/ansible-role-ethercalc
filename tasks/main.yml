@@ -65,5 +65,10 @@
     name: ethercalc
     enabled: yes
 
+- name: ensure ethercalc is started
+  service:
+    name: ethercalc
+    state: started
+
 - include: monit.yml
   when: ethercalc_monit_enabled

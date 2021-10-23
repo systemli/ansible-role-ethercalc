@@ -6,7 +6,7 @@ After=syslog.target network.target
 Type=simple
 User={{ ethercalc_user }}
 Group={{ ethercalc_group }}
-ExecStart=node {{ '--max-old-space-size=' + ethercalc_node_max_old_space_size|string if ethercalc_node_max_old_space_size is defined else '' }} {{ ethercalc_path }}/bin/ethercalc {{ ethercalc_cors|ternary('--cors', '') }} --host {{ ethercalc_ip }} --port {{ ethercalc_port }} --expire {{ ethercalc_spread_seconds_to_expire }}
+ExecStart=node {{ '--max-old-space-size=' + ethercalc_node_max_old_space_size|string if ethercalc_node_max_old_space_size is defined else '' }} {{ ethercalc_path }}/bin/ethercalc {{ ethercalc_cors|ternary('--cors', '') }} --host {{ ethercalc_ip }} --port {{ ethercalc_port }} {% if ethercalc_redis_enabled %}--expire {{ ethercalc_spread_seconds_to_expire }}{% endif %}
 Restart=on-failure
 
 [Install]
